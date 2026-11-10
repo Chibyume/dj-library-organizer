@@ -1,0 +1,43 @@
+{
+  "name": "dj-library-organizer",
+  "productName": "DJ Library Organizer",
+  "version": "0.9.3",
+  "description": "A local-first practice library and playlist organizer for macOS",
+  "private": true,
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && electron .",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "package": "npm run build && node scripts/package.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "format": "prettier --write src scripts tests package.json tsconfig.json index.html",
+    "format:check": "prettier --check src scripts tests package.json tsconfig.json index.html"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "3.14.13",
+    "better-sqlite3": "13.0.3",
+    "lucide-react": "1.53.0",
+    "music-metadata": "12.1.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sax": "1.6.1",
+    "strtok3": "10.3.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@electron/rebuild": "4.2.1",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/sax": "1.2.7",
+    "electron": "44.7.0",
+    "esbuild": "0.28.2",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}
